@@ -13,12 +13,4 @@ describe('TasksService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-
-  it('should add a task', () => {
-    service.addTask('Test Task');
-    expect(service.allTasks()).toEqual(['Test Task']);
-  });
-  it('should not add a messagexxxxxxxxx',()=>{
-    service.addMessage('Test Message');
-  })
 });

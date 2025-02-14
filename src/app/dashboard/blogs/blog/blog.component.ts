@@ -37,7 +37,7 @@ export class BlogComponent {
         .delete<deleteResponse>(`http://127.0.0.1:8000/blogs/${id}`,{headers:headers})
         .subscribe((response: deleteResponse) => {
           if (response.success) {
-            alert('Blog deleted successfully Conflict from ishap');
+            alert('Blog deleted successfully');
           }
         });
     }
