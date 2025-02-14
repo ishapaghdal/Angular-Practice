@@ -11,12 +11,9 @@ export class AuthDirective {
     effect(()=>{
       if(!this.changeLogin()) {
         console.log('Show element');
-
-        
       }
       else{
-        console.log('Do not show');
-        
+      console.log('Do not show - stashed -2');
       }
     });
    }
