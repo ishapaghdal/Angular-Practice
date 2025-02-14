@@ -1,0 +1,16 @@
+<form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+  {{ currentDate | date : "medium" }}<br />
+  {{ temp | temp }}<br />
+  <label for="email">Email:</label>
+  <input type="text" id="email" formControlName="email" />
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" formControlName="password" />
+
+  <button type="submit" [disabled]="!LoginForm.valid">login</button>
+</form>
+<br />
+
+<button appAuth changeLogin="changeLogin" (click)="toggleLogin()">
+  SignUp
+</button>

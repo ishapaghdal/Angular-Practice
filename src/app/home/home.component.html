@@ -1,0 +1,5 @@
+@if(IsLoginPage()){
+<app-login (changeLogin)="toggleLogin($event)"></app-login>
+} @else {
+<app-signup (changeLogin)="toggleLogin($event)"></app-signup>
+}

@@ -1,0 +1,14 @@
+
+<ul>
+    @for (blog of allBlogs(); track $index ){
+        <li class="text-xl font-bold underline">
+            <app-blog [blog] = "blog"/>
+        </li>
+    } @empty {
+        <p> There are no blogs yet.</p>
+    }
+    <div>
+        <button (click) = "goToPage(prevPage())" [disabled]="!prevPage()">Previous</button>
+        <button (click) = "goToPage(nextPage())" [disabled]="!nextPage()"> Next</button>
+    </div>
+</ul>

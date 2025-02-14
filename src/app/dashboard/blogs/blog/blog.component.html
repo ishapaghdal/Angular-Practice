@@ -1,0 +1,15 @@
+<div>
+  <h2>{{ blog().title }}</h2>
+  <p>{{ blog().author.username }}</p>
+  <p>{{ blog().content }}</p>
+  <p>{{ blog().category.name }}</p>
+  <p>{{ blog().publication_date }}</p>
+  <p>
+    @for (tag of blog().tags; track $index ){
+    <li>{{ tag.name }}</li>
+    }
+  </p>
+
+  <button (click)="onDelete(blog().id)">Delete</button>
+  <button (click)="onDetails()">Details</button>
+</div>
